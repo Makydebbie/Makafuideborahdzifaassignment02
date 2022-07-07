@@ -66,8 +66,9 @@ function celsiusToFahrenheit(arrayOfNumbers) {
     }
     for(let i = 0; i < arrayOfNumbers.length; i++){
       let cNumber = arrayOfNumbers[i]
-      let fNumber = convertCToF(cNumber)
-      fNumbers.push(fNumber)
+      let fDecimalNumber = convertCToF(cNumber)
+      let fWholeNumber = Math.trunc(fDecimalNumber)
+      fNumbers.push(fWholeNumber)
     }
     return fNumbers
 }
